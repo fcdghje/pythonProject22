@@ -1,6 +1,6 @@
 import telebot
 import requests as r
-bot = telebot.TeleBot(')
+bot = telebot.TeleBot('5396054230:AAFpE1oQKho9kNllbxkNobGhzz4aclELkAE')
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -10,9 +10,10 @@ def get_text_messages(message):
     elif message.text == '/help':
         answer = 'Напишы "Привет"'
         bot.send_message(message.from_user.id, answer)
-    elif message .text == '/check-github':
+    elif message .text == 'c':
         response =r.get('https://github.com')
-        if
+        if response.status_code == 200:
+            bot.send_message(message.from_user.id, 'доступен')
     else:
          answer = 'япам "я не понимаю"'
          bot.send_message(message.from_user.id, answer)
