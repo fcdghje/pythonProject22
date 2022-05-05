@@ -14,15 +14,6 @@ def get_text_messages(message):
          answer = 'ямпап "Привет"'
          bot.send_message(message.from_user.id, answer)
 bot.polling(none_stop=True,interval= 0)
-def get_text_messages(message):
-    if message.text == 'Привет как дела':
-        answer ='привет хорошо'
-        bot.send_message(message.from_user.id,answer)
-    elif message.text == '/help':
-        answer = 'Напишы "Привет 1"'
-        bot.send_message(message.from_user.id, answer)
-    else:
-         answer = 'пока "Привет ми"'
-         bot.send_message(message.from_user.id, answer)
+
 
 
