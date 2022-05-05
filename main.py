@@ -1,6 +1,6 @@
 import telebot
-
-bot = telebot.TeleBot('5396054230:AAFpE1oQKho9kNllbxkNobGhzz4aclELkAE')
+import requests as r
+bot = telebot.TeleBot(')
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -10,8 +10,11 @@ def get_text_messages(message):
     elif message.text == '/help':
         answer = 'Напишы "Привет"'
         bot.send_message(message.from_user.id, answer)
+    elif message .text == '/check-github':
+        response =r.get('https://github.com')
+        if
     else:
-         answer = 'ямпап "Привет"'
+         answer = 'япам "я не понимаю"'
          bot.send_message(message.from_user.id, answer)
 bot.polling(none_stop=True,interval= 0)
 
